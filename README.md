@@ -17,9 +17,11 @@ We welcome contributions such as:
 See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## Funding & Transparency
-Pythonly is funded by community contributions via Open Collective.
-All funds are used to support development, maintenance, and educational content.
+Pythonly is a community-driven educational project.
+Community funding via Open Collective is being set up to support development,
+maintenance, and educational content.
 
-Learn more or support the project:
+Learn more:
 https://opencollective.com/pythonly
+
 
