@@ -2,10 +2,13 @@
   "name": "open-education",
   "version": "1.0.0",
   "description": "Pythonly is a community-funded educational project focused on teaching Python, data science, and AI through interactive, browser-based tools.",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
+    "prepare": "husky",
+    "notebooks:sync": "node scripts/pyy-to-ipynb.js --all-curricula && node scripts/check-curricula-ipynb.js",
+    "notebooks:check": "node scripts/check-curricula-ipynb.js"
   },
   "repository": {
     "type": "git",
