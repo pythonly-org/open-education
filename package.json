@@ -1,0 +1,24 @@
+{
+  "name": "open-education",
+  "version": "1.0.0",
+  "description": "Pythonly is a community-funded educational project focused on teaching Python, data science, and AI through interactive, browser-based tools.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pythonly-org/open-education.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pythonly-org/open-education/issues"
+  },
+  "homepage": "https://github.com/pythonly-org/open-education#readme",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
