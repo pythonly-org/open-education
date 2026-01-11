@@ -42,10 +42,40 @@ function sha256Hex(buf) {
   return crypto.createHash("sha256").update(buf).digest("hex");
 }
 
+function writeAssetUtf8(dirAbs, ext, content) {
+  const buf = Buffer.from(String(content), "utf8");
+  const hash = sha256Hex(buf);
+  const targetAbs = path.join(dirAbs, `${hash}.${ext}`);
+  if (!fs.existsSync(targetAbs)) {
+    fs.writeFileSync(targetAbs, buf);
+  }
+  return targetAbs;
+}
+
 function pathRelativeFromNotebookDir(notebookPath, targetPath) {
   const rel = path.relative(path.dirname(notebookPath), targetPath);
   // Notebook URLs want forward slashes even on Windows.
   return rel.split(path.sep).join("/");
+}
+
+function extractSvgFromText(rawText) {
+  if (typeof rawText !== "string") return null;
+  const svgStart = rawText.indexOf("<svg");
+  if (svgStart === -1) return null;
+  const svgEnd = rawText.indexOf("</svg>", svgStart);
+  if (svgEnd === -1) return null;
+  const end = svgEnd + "</svg>".length;
+
+  // Prefer including the XML header if it exists immediately before <svg>.
+  const xmlStart = rawText.lastIndexOf("<?xml", svgStart);
+  const start = xmlStart !== -1 ? xmlStart : svgStart;
+
+  const svg = rawText.slice(start, end).trim();
+  if (!svg.includes("<svg")) return null;
+
+  const prefix = rawText.slice(0, start);
+  const suffix = rawText.slice(end);
+  return { svg, prefix, suffix };
 }
 
 function replaceDataUriImagesInText(text, notebookAbsPath, writeImage) {
@@ -123,6 +153,38 @@ export function extractNotebookImagesAndRewrite(nb, notebookAbsPath) {
 
         if (oo.output_type === "display_data" || oo.output_type === "execute_result") {
           if (oo.data && typeof oo.data === "object" && !Array.isArray(oo.data)) {
+            // If Matplotlib (or others) stored raw SVG markup as text/plain or text/html,
+            // extract it to a .svg file and replace with <img src="..."> for GitHub.
+            for (const k of ["text/html", "text/plain"]) {
+              const v = oo.data[k];
+              const joined = Array.isArray(v) ? v.join("") : typeof v === "string" ? v : null;
+              if (!joined) continue;
+              const svgParts = extractSvgFromText(joined);
+              if (!svgParts) continue;
+
+              const absWritten = writeAssetUtf8(imagesDirAbs, "svg", svgParts.svg);
+              const rel = pathRelativeFromNotebookDir(notebookAbsPath, absWritten);
+              const imgHtml = `<img src="${rel}" />`;
+
+              // Keep existing text/html (if any) and append the image.
+              if (typeof oo.data["text/html"] === "string") {
+                oo.data["text/html"] += imgHtml;
+              } else if (Array.isArray(oo.data["text/html"])) {
+                oo.data["text/html"] = toLineArray(oo.data["text/html"].join("") + imgHtml);
+              } else {
+                oo.data["text/html"] = imgHtml;
+              }
+
+              // Replace the original field (text/plain or text/html) with a small stub.
+              const stub =
+                (svgParts.prefix || "").trimEnd() +
+                (svgParts.prefix ? "\n" : "") +
+                `[svg extracted to ${rel}]` +
+                "\n" +
+                (svgParts.suffix || "").trimStart();
+              oo.data[k] = toLineArray(stub);
+            }
+
             // Extract any image/* payloads into files and convert to text/html <img src="...">.
             // Some sources store image payloads as data URIs ("data:image/png;base64,...").
             for (const [mime, val] of Object.entries(oo.data)) {
