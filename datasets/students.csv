@@ -1,0 +1,101 @@
+first_name,last_name,age,country,city,interests,courses
+Igor,Kowalski,14,Mexico,Monterrey,science;math;reading;gaming,geometry;python
+Aarav,Garcia,17,Mexico,Puebla,reading;art;math,physics;biology
+Tariq,Popescu,17,France,Toulouse,art;reading,history;python;literature
+Carlos,Kowalski,18,India,Mumbai,reading;music;coding,chemistry;biology;literature
+Mateo,Kowalski,14,India,Chennai,gaming;math;art;music,algebra;physics;geometry;python
+Priya,Kowalski,17,France,Paris,math;art;coding,algebra;physics;python
+Mateo,Haddad,15,Mexico,Puebla,science;gaming;math;sports,literature;geometry
+Zara,Kowalski,14,Italy,Rome,music;reading,chemistry;literature;biology;history
+Niko,Popescu,18,Japan,Kyoto,gaming;reading;art;music,physics;python;algebra;history
+Niko,Kowalski,17,China,Beijing,reading;gaming,python;chemistry
+Aarav,Kumar,15,Italy,Turin,art;sports;coding;gaming,physics;geometry;algebra
+Yuki,Schmidt,14,Mexico,Puebla,gaming;science,chemistry;python
+Tariq,Schmidt,18,Italy,Turin,science;gaming,algebra;python;physics;geometry
+Aya,Moreau,18,France,Marseille,music;art;science,history;chemistry
+Amara,López,16,Mexico,Puebla,reading;coding;music,chemistry;geometry;literature;physics
+Zara,Petrov,18,Germany,Berlin,gaming;music,history;python;chemistry;biology
+Mateo,Popescu,18,Germany,Munich,art;math,chemistry;biology;physics;python
+Fatima,Popescu,17,Nigeria,Abuja,reading;gaming;music,geometry;chemistry;algebra;biology
+Sofia,Lopez,15,India,Bangalore,math;coding;sports,literature;python;geometry
+Niko,Popescu,16,Nigeria,Ibadan,reading;math;sports;gaming,biology;physics;history
+Tariq,Silva,18,France,Toulouse,gaming;science,history;python;literature
+Chen,Garcia,16,Japan,Kyoto,music;coding,chemistry;algebra;literature
+Zara,Dubois,18,Nigeria,Abuja,sports;art;science,literature;history;geometry
+Aarav,Aliyev,17,Mexico,Mexico City,music;math,physics;algebra;biology
+Leila,Lopez,18,Russia,Kazan,science;gaming;art;math,literature;history
+Aya,Rossi,18,Russia,Saint Petersburg,gaming;science;reading;sports,history;literature
+Mei,Zhang,18,Germany,Munich,math;music;coding;gaming,literature;python
+Tariq,Nguyen,15,China,Beijing,math;coding,biology;algebra;geometry
+Chen,Aliyev,16,Germany,Frankfurt,science;music;coding;sports,geometry;physics;chemistry;history
+Aya,Aliyev,16,China,Shanghai,reading;art,biology;python;chemistry;literature
+Luca,Singh,14,Germany,Frankfurt,reading;science,geometry;biology;physics;python
+Mateo,Lopez,18,Japan,Osaka,science;coding;reading;math,literature;chemistry;algebra;history
+Aya,Garcia,14,Russia,Moscow,science;gaming;art,physics;chemistry
+Aya,Moreau,15,Nigeria,Ibadan,science;music;art,geometry;literature
+Niko,Nguyen,15,Japan,Tokyo,art;music;gaming;sports,algebra;history;python;literature
+Aarav,López,16,Italy,Turin,sports;math;science;music,geometry;chemistry;literature
+Leila,Popescu,17,Brazil,Rio de Janeiro,math;music;science,biology;algebra
+Leila,Silva,18,Nigeria,Ibadan,music;coding,geometry;history;python;physics
+Aya,Petrov,17,Italy,Naples,music;art;coding;science,geometry;chemistry;history
+Tariq,López,14,Mexico,Mexico City,reading;music;gaming,literature;geometry
+Leila,Haddad,15,Russia,Saint Petersburg,music;sports;gaming,algebra;biology;python
+Yuki,Rossi,17,China,Shenzhen,science;reading,physics;algebra
+Amara,Garcia,16,India,Delhi,math;sports,history;geometry;literature;chemistry
+Amara,Nguyen,17,France,Lyon,math;reading;sports;art,literature;history;python
+Zara,Garcia,18,France,Paris,gaming;reading;art;music,history;python
+Tariq,Kumar,15,Japan,Nagoya,coding;science;sports;art,geometry;chemistry
+Ines,Tanaka,14,Italy,Naples,science;coding,chemistry;biology;physics
+Chen,Schmidt,17,Russia,Saint Petersburg,gaming;sports;coding;science,chemistry;algebra;biology;physics
+Chen,Silva,14,Germany,Hamburg,music;coding,chemistry;physics;literature
+Yuki,Singh,15,Nigeria,Lagos,math;art;coding;science,chemistry;python;geometry;physics
+Chen,Ivanov,16,India,Mumbai,music;science;art,history;literature
+Sofia,Dubois,17,Italy,Rome,sports;art;math;coding,python;chemistry;literature;history
+Amara,Rossi,14,Brazil,Brasília,coding;reading;science;math,literature;python;history;algebra
+Ali,Schmidt,14,Russia,Novosibirsk,math;music;art;coding,algebra;biology
+Aarav,Nguyen,18,France,Lyon,reading;sports,geometry;history;literature
+Yuki,Popescu,18,Russia,Moscow,reading;math;sports;art,biology;algebra
+Ali,Silva,16,Russia,Saint Petersburg,reading;gaming,algebra;chemistry;geometry
+Ines,Dubois,18,Germany,Berlin,math;art,chemistry;biology;algebra;literature
+Mei,Moreau,16,Brazil,Salvador,art;reading,algebra;physics
+Niko,Petrov,17,Russia,Novosibirsk,science;sports;art;gaming,chemistry;algebra;geometry;literature
+Yuki,Kumar,16,Nigeria,Lagos,reading;music;art,physics;algebra;python;geometry
+Priya,Kowalski,15,China,Guangzhou,reading;math;coding,python;chemistry;algebra
+Aya,Hassan,16,India,Mumbai,art;math;sports;music,physics;algebra;chemistry
+Zara,Garcia,17,India,Chennai,art;math,biology;literature;physics
+Luca,López,18,Mexico,Guadalajara,science;music;art,python;physics
+Igor,Lopez,17,Japan,Tokyo,science;art,biology;history;geometry;literature
+Sofia,Tanaka,15,China,Guangzhou,sports;math;music;coding,biology;geometry;literature;python
+Fatima,Ivanov,18,Brazil,Brasília,sports;science;music;gaming,history;geometry
+Leila,Garcia,17,Brazil,São Paulo,coding;sports;art,literature;chemistry;algebra;python
+Aarav,Kumar,18,China,Beijing,art;reading;music;coding,python;history
+Tariq,Schmidt,15,Germany,Munich,music;math;reading,python;physics;geometry
+Igor,Haddad,15,China,Shanghai,sports;coding,python;biology;chemistry
+Leila,Rossi,18,Brazil,Rio de Janeiro,science;gaming;coding,history;chemistry
+Mei,Silva,15,Brazil,Salvador,coding;art;gaming,python;geometry
+Niko,Kumar,18,Italy,Naples,gaming;reading,physics;python
+Tariq,Petrov,17,China,Beijing,gaming;science,biology;python;history
+Sofia,Dubois,14,Japan,Tokyo,coding;reading,history;literature;physics
+Luca,Garcia,18,France,Marseille,reading;science;art,biology;algebra;physics;history
+Ines,Kowalski,15,Germany,Munich,music;gaming,history;chemistry;physics
+Ines,Popescu,14,Japan,Nagoya,reading;art;science;sports,literature;physics;algebra
+Aarav,Singh,16,Germany,Frankfurt,music;science;gaming,literature;geometry;history
+Aya,Ivanov,17,India,Delhi,math;art;coding,history;biology;python
+Priya,Rossi,18,Russia,Moscow,reading;music;art;sports,algebra;biology;literature
+Luca,Hassan,14,Mexico,Guadalajara,sports;coding;gaming;art,algebra;physics;geometry;literature
+Zara,Popescu,15,Brazil,Salvador,art;sports,history;chemistry;algebra;literature
+Mei,Kumar,16,Nigeria,Abuja,music;art;gaming,history;physics;geometry;biology
+Leila,Silva,16,Brazil,Brasília,science;gaming;art,physics;chemistry;python
+Aarav,Singh,18,Nigeria,Abuja,science;gaming,history;chemistry;geometry
+Fatima,Zhang,16,France,Marseille,coding;gaming,python;chemistry
+Ines,Haddad,18,Japan,Nagoya,math;sports;science,algebra;python
+Ines,Ivanov,18,Brazil,Brasília,sports;math;gaming,python;biology;algebra;literature
+Ines,Singh,18,India,Mumbai,science;art;coding,physics;geometry
+Mei,Hassan,14,Mexico,Puebla,coding;reading,algebra;python
+Igor,Zhang,17,France,Paris,math;sports;reading;coding,chemistry;biology;history;python
+Yuki,Schmidt,17,India,Chennai,science;art;sports;music,python;history;geometry
+Niko,Schmidt,18,China,Shanghai,math;reading;gaming;science,history;python
+Zara,Popescu,17,Japan,Tokyo,gaming;reading;science,physics;chemistry;algebra
+Noah,Moreau,16,Nigeria,Ibadan,coding;sports;reading,python;history
+Mei,Popescu,17,Italy,Naples,math;coding;reading;art,history;algebra
+Yuki,Petrov,17,Italy,Milan,science;sports;gaming,chemistry;biology;history
