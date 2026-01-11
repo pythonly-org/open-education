@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { extractNotebookImagesAndRewrite } from "./extract-notebook-images.js";
 
 /**
  * Convert Pythonly `.pyy` (nbformat-ish JSON) into a strict nbformat v4 `.ipynb`
@@ -163,6 +164,11 @@ function normalizeNotebook(nb) {
     return next;
   });
 
+  // Extract data-URI images (markdown + outputs) into per-notebook `<notebook>.images/`
+  // and rewrite references to relative file paths for GitHub rendering.
+  //
+  // NOTE: This runs later in convertOnePyy() where we know the target notebook path.
+
   return out;
 }
 
@@ -181,7 +187,8 @@ function convertOnePyy(pyyPath) {
   const ipynbPath = abs.replace(/\.pyy$/i, ".ipynb");
 
   const src = readJsonFile(abs);
-  const nb = normalizeNotebook(src);
+  const nb0 = normalizeNotebook(src);
+  const nb = extractNotebookImagesAndRewrite(nb0, path.resolve(ipynbPath));
   writeJsonFile(ipynbPath, nb);
 
   return { pyyPath: abs, ipynbPath };

@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import { execSync } from "child_process";
 
 const files = execSync("git diff --cached --name-only", { encoding: "utf8" })
@@ -13,6 +15,18 @@ for (const f of files) {
   execSync(`node scripts/pyy-to-ipynb.js "${f}"`, { stdio: "inherit" });
   const target = f.replace(/\.pyy$/, ".ipynb");
   execSync(`git add "${target}"`);
+
+  // Stage per-notebook extracted images (may include deletions due to regen).
+  const imagesDir = path.resolve(target).replace(/\.ipynb$/, ".images");
+  if (fs.existsSync(imagesDir)) {
+    execSync(`git add -A -- "${imagesDir}"`);
+  } else {
+    // If the folder was removed (no images), stage deletions only if git previously tracked it.
+    const tracked = execSync(`git ls-files -- "${imagesDir}"`, { encoding: "utf8" }).trim();
+    if (tracked.length > 0) {
+      execSync(`git add -A -- "${imagesDir}"`);
+    }
+  }
 }
 
 // Strict validation for generated mirrors (GitHub-like schema enforcement).
