@@ -22,4 +22,7 @@ maintenance, and educational content.
 Learn more:
 https://opencollective.com/pythonly
 
+## License 
+Apache-2.0
+
 
