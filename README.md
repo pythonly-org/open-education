@@ -1,11 +1,9 @@
 # Pythonly – Open Education Resources
 
-Pythonly is a community-funded educational project focused on teaching Python,
-data science, and AI through interactive, browser-based tools.
+[Pythonly](https://pythonly.org) is a community-funded educational project focused on teaching Python, data science, and AI through interactive, browser-based tools.
 
 This repository contains **open educational materials** including curricula,
-dataset walkthroughs, and demo notebooks that are freely available to educators
-and learners. The Pythonly platform itself is developed separately.
+datasets, and demo notebooks for educators and learners. The Pythonly platform itself is developed separately.
 
 ## Contributing
 We welcome contributions such as:
