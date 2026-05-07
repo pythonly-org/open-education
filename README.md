@@ -14,6 +14,17 @@ We welcome contributions such as:
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
+## Installing the Pythonly R package
+To install the R package first run
+```R
+remotes::install_git("https://github.com/pythonly-org/open-education.git", subdir = "r/pythonly")
+```
+
+Then to use the package in scripts make sure to add
+```R
+library(pythonly)
+```
+
 Learn more:
 https://opencollective.com/pythonly
 
