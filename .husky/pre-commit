@@ -1,0 +1,10 @@
+
+#!/usr/bin/env sh
+. "$(dirname "$0")/_/h"
+
+set -e
+
+# Auto-mirror staged .pyy → .ipynb and validate the generated notebooks.
+node scripts/mirror-pyy.js
+
+
