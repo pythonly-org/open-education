@@ -25,9 +25,6 @@ Then to use the package in scripts make sure to add
 library(pythonly)
 ```
 
-Learn more:
-https://opencollective.com/pythonly
-
 ## License 
 Apache-2.0
 
