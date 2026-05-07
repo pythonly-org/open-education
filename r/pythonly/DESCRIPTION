@@ -1,0 +1,22 @@
+Package: pythonly
+Type: Package
+Title: Pythonly Built-in Datasets
+Version: 0.0.1
+Authors@R: c(
+    person("Pythonly", "Contributors", email = "info@pythonly.org", role = c("aut", "cre"))
+  )
+Description: Datasets used by the Pythonly open education project, packaged from
+    CSV sources in the pythonly-org/open-education repository.
+License: Apache License (== 2.0)
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 4.1.0)
+Imports:
+    utils
+Suggests:
+    devtools,
+    roxygen2,
+    usethis
+Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.0.0

@@ -9,3 +9,12 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+
+# Node
+/node_modules/
+
+# Cursor
+/.cursor/
+
+# macOS
+.DS_Store
